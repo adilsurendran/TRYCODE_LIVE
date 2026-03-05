@@ -1,0 +1,328 @@
+:root {
+  --primary-color: #ffd700;
+  --dark-bg: #0a0a0a;
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --text-muted: #888;
+  --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+html,
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  overflow-x: hidden;
+  width: 100%;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+[class*="col-"] {
+  min-width: 0;
+  /* Prevent flex children from exceeding parent width */
+}
+
+h1,
+h2,
+h3,
+.brand {
+  font-family: 'Outfit', sans-serif;
+}
+
+/* Glass Card */
+.glass-card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+}
+
+body:not(.light-theme) .glass-card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+}
+
+/* Product Carousel */
+.product-carousel-container {
+  aspect-ratio: 4/5;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+.carousel-track {
+  height: 100%;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item-img {
+  min-width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: var(--transition-smooth);
+}
+
+.carousel-btn:hover {
+  background: #000;
+  color: #fff;
+}
+
+.prev-btn {
+  left: 20px;
+}
+
+.next-btn {
+  right: 20px;
+}
+
+.indicator-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #ccc;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.indicator-dot.active {
+  background: #000;
+  width: 24px;
+  border-radius: 4px;
+}
+
+/* Product Info styling */
+.manufacturer-name {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 700;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.product-display-name {
+  font-weight: 700;
+  color: inherit;
+}
+
+.original-price {
+  text-decoration: line-through;
+  color: #aaa;
+  font-size: 1.25rem;
+}
+
+.new-price {
+  font-weight: 800;
+  color: var(--text);
+  font-size: 2rem;
+}
+
+.size-btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  border: 2px solid #eee;
+  background: #fff;
+  font-weight: 600;
+  transition: var(--transition-smooth);
+}
+
+.size-btn.active {
+  border-color: #000;
+  background: #000;
+  color: #fff;
+}
+
+.size-btn:hover:not(.active) {
+  border-color: #ccc;
+}
+
+/* Delivery Section */
+.delivery-section {
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* Payment Options */
+.payment-option-card {
+  cursor: pointer;
+}
+
+.payment-option-card input {
+  display: none;
+}
+
+.payment-card-inner {
+  padding: 12px 20px;
+  border: 2px solid #eee;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  transition: var(--transition-smooth);
+  min-width: 90px;
+}
+
+.payment-option-card input:checked+.payment-card-inner {
+  border-color: var(--primary-color);
+  background: #fffdf0;
+}
+
+/* Mobile Styling for Carousel */
+@media (max-width: 991px) {
+  .product-carousel-container {
+    overflow-x: auto !important;
+    scroll-snap-type: x mandatory;
+    display: block;
+    overflow-y: hidden;
+    max-width: 100%;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .carousel-track {
+    display: flex !important;
+    width: max-content !important;
+    /* Forces track to expand to fit all images */
+    transition: none !important;
+    transform: none !important;
+  }
+
+  .carousel-item-img {
+    scroll-snap-align: center;
+    flex: 0 0 100vw;
+    /* Each image takes full viewport width */
+    max-width: 100%;
+    object-fit: cover;
+  }
+
+  .carousel-btn,
+  .carousel-indicators-custom {
+    display: none !important;
+    /* Hide navigation on mobile for native scroll */
+  }
+
+  /* Reduce intense gutters on mobile */
+  .row.g-5 {
+    --bs-gutter-x: 1rem;
+    --bs-gutter-y: 1rem;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  main.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    overflow-x: hidden;
+  }
+}
+
+/* Review Card */
+.review-card {
+  background: var(--panel);
+  padding: 20px;
+  border-radius: 15px;
+  border: 1px solid var(--border);
+  color: var(--text);
+  transition: var(--transition-smooth);
+}
+
+body:not(.light-theme) .review-card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+}
+
+/* Similar Product Card */
+.similar-p-card {
+  background: var(--panel) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 15px !important;
+  transition: var(--transition-smooth);
+  position: relative;
+  overflow: hidden;
+  color: var(--text) !important;
+}
+
+body:not(.light-theme) .similar-p-card {
+  background: rgba(255, 255, 255, 0.03) !important;
+  backdrop-filter: blur(10px);
+}
+
+.similar-p-card:hover {
+  transform: translateY(-5px);
+}
+
+.wishlist-heart-overlay {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: white;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  z-index: 5;
+  color: #ff4d4d;
+  transition: var(--transition-smooth);
+}
+
+.wishlist-heart-overlay:hover {
+  transform: scale(1.1);
+  background: #ff4d4d;
+  color: white;
+}
+
+.similar-p-img {
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.wishlist-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  transition: var(--transition-smooth);
+  width: 100%;
+  /* Default for mobile */
+}
+
+@media (min-width: 768px) {
+  .wishlist-btn {
+    width: 60px !important;
+    height: 60px !important;
+    padding: 0 !important;
+    flex-shrink: 0;
+    flex-grow: 0;
+    border-radius: 50%;
+    /* Circle for 'just symbol' look */
+  }
+}
+
+.wishlist-btn.active {
+  background-color: #ff4d4d !important;
+  color: white !important;
+  border-color: #ff4d4d !important;
+}

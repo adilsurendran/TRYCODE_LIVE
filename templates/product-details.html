@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details - LoftOriginals</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="../static/css/index.css">
+    <link rel="stylesheet" href="../static/css/product-details.css">
+</head>
+
+<body class="dark-theme">
+
+    <!-- ✅ Top bar -->
+    <div class="topbar py-2">
+        <div class="container topbar-inner d-flex justify-content-between align-items-center">
+            <div class="topbar-left">
+                <div class="topbar-track">
+                    <span>
+                        <i class="bi bi-truck me-1"></i> Free Delivery over ₹999
+                        <span class="mx-2 opacity-50">|</span>
+                        <i class="bi bi-shield-check me-1"></i> Secure Payments
+                        <span class="mx-3 opacity-50">|</span>
+                        <i class="bi bi-telephone me-1"></i> +91 98765 43210
+                        <span class="mx-2 opacity-50">|</span>
+                        <i class="bi bi-geo-alt me-1"></i> Kerala, India
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ✅ Navbar -->
+    <nav class="navbar sticky-top">
+        <div class="container">
+            <a href="index.html" class="navbar-brand d-flex align-items-center gap-2 m-0 p-0">
+                <h5 class="offcanvas-title brand m-0 d-flex align-items-center gap-2">
+                    <img src="../static/media/Vanta logo png.png" alt="" class="brand-logo">
+                    <img src="../static/media/vanta .png" alt="" class="brand-logo-nm">
+                </h5>
+            </a>
+
+            <div class="d-flex gap-2 ms-auto">
+                <button class="btn icon-btn theme-toggle" id="themeToggle" type="button" aria-label="Toggle theme">
+                    <i class="bi bi-moon-stars-fill" id="themeIcon"></i>
+                </button>
+                <a href="wishlist.html" class="btn icon-btn" title="Wishlist">
+                    <i class="bi bi-heart"></i>
+                </a>
+                <a href="cart.html"
+                    class="btn btn-warning cart-icon d-flex align-items-center gap-2 px-3 rounded-3 position-relative fw-bold">
+                    <i class="bi bi-bag-fill"></i>
+                    <span class="d-none d-sm-inline">Cart</span>
+                    <span id="cart-count" class="badge bg-dark text-white rounded-pill">0</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container py-5">
+        <!-- Go Back Button -->
+        <div class="mb-4">
+            <a href="javascript:history.back()" class="text-decoration-none d-flex align-items-center gap-2"
+                style="width: fit-content; color: var(--text); opacity: 0.8; font-weight: 500; font-size: 0.95rem; transition: opacity 0.3s;"
+                onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.8'">
+                <i class="bi bi-arrow-left"></i> Go Back
+            </a>
+        </div>
+
+        <div class="row g-5">
+            <!-- Product Images Carousel -->
+            <div class="col-lg-6">
+                <div class="product-carousel-container shadow-sm rounded-4 overflow-hidden position-relative">
+                    <div id="productCarousel" class="carousel-track d-flex">
+                        <!-- Images will be injected here -->
+                    </div>
+
+                    <!-- Desktop Navigation -->
+                    <button class="carousel-btn prev-btn d-none d-lg-flex" onclick="moveCarousel(-1)">
+                        <i class="bi bi-chevron-left"></i>
+                    </button>
+                    <button class="carousel-btn next-btn d-none d-lg-flex" onclick="moveCarousel(1)">
+                        <i class="bi bi-chevron-right"></i>
+                    </button>
+
+                    <!-- Carousel Indicators -->
+                    <div class="carousel-indicators-custom d-flex justify-content-center gap-2 mt-3">
+                        <!-- Dots injected here -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Info -->
+            <div class="col-lg-6">
+                <div class="product-info-card p-4 glass-card">
+                    <p id="productManufacturer" class="manufacturer-name mb-1">Manufacturer Name</p>
+                    <h1 id="productName" class="product-display-name mb-3">Product Name</h1>
+
+                    <div class="price-section mb-4">
+                        <span id="originalPrice" class="original-price">₹ 0</span>
+                        <span id="newPrice" class="new-price ms-3">₹ 0</span>
+                    </div>
+
+                    <p id="productDescription" class="product-description mb-4">
+                        Product description goes here.
+                    </p>
+
+                    <div class="size-section mb-4">
+                        <h6 class="fw-bold mb-3">Select Size</h6>
+                        <div class="size-options d-flex gap-2">
+                            <button class="size-btn">S</button>
+                            <button class="size-btn">M</button>
+                            <button class="size-btn">L</button>
+                            <button class="size-btn">XL</button>
+                            <button class="size-btn">XXL</button>
+                        </div>
+                    </div>
+
+                    <div class="rating-section mb-4">
+                        <h6 class="fw-bold mb-2">Overall Rating</h6>
+                        <div class="d-flex flex-wrap align-items-center gap-2">
+                            <div id="starRating" class="star-rating text-warning fs-5">
+                                <!-- Stars injected here -->
+                            </div>
+                            <span id="ratingValue" class="fw-bold fs-5">0.0</span>
+                            <span class="text-muted small w-100 d-block d-sm-inline">(Based on customer reviews)</span>
+                        </div>
+                    </div>
+
+                    <!-- Quantity -->
+                    <div class="quantity-section mb-4">
+                        <h6 class="fw-bold mb-3">Quantity</h6>
+                        <div class="d-flex align-items-center gap-3">
+                            <button class="btn btn-outline-dark rounded-circle fw-bold q-btn" id="qtyMinus"
+                                style="width:40px;height:40px;display:flex;align-items:center;justify-content:center;">−</button>
+                            <input type="number" id="productQty" value="1" min="1"
+                                class="form-control text-center fw-bold border-0 bg-light-soft"
+                                style="width:70px;border-radius:12px;font-size:1.2rem;" readonly>
+                            <button class="btn btn-dark rounded-circle fw-bold q-btn" id="qtyPlus"
+                                style="width:40px;height:40px;display:flex;align-items:center;justify-content:center;">+</button>
+                        </div>
+                    </div>
+
+                    <!-- Actions -->
+                    <div class="d-flex flex-column flex-md-row gap-3 mb-5">
+                        <button class="btn btn-warning btn-lg flex-grow-1 py-3 fw-bold" onclick="addToCart()">
+                            <i class="bi bi-bag-plus me-2"></i> Add to Cart
+                        </button>
+                        <button class="btn btn-dark btn-lg flex-grow-1 py-3 fw-bold" onclick="buyNow()">
+                            Buy Now
+                        </button>
+                        <button class="btn btn-outline-danger btn-lg wishlist-btn fw-bold py-3"
+                            onclick="toggleWishlist()">
+                            <i class="bi bi-heart me-md-0 me-2"></i>
+                            <span class="d-md-none">Add to Wishlist</span>
+                        </button>
+                    </div>
+
+                    <!-- Company Details -->
+                    <div class="company-section p-4 glass-card mb-4" style="border-radius: 20px;">
+                        <h6 class="fw-bold mb-3 d-flex align-items-center">
+                            <i class="bi bi-building me-2 text-primary"></i>
+                            About Manufactured Company
+                        </h6>
+                        <p id="companyDetails" class="small text-muted mb-0">
+                            Loading company details...
+                        </p>
+                    </div>
+
+                    <!-- Payment -->
+                    <div class="payment-section">
+                        <h6 class="fw-bold mb-3">Select Payment Method</h6>
+                        <div class="payment-options d-flex flex-wrap gap-2">
+                            <label class="payment-option-card">
+                                <input type="radio" name="payment" value="upi">
+                                <div class="payment-card-inner">
+                                    <i class="bi bi-qr-code"></i>
+                                    <span>UPI</span>
+                                </div>
+                            </label>
+                            <label class="payment-option-card">
+                                <input type="radio" name="payment" value="card">
+                                <div class="payment-card-inner">
+                                    <i class="bi bi-credit-card"></i>
+                                    <span>Card</span>
+                                </div>
+                            </label>
+                            <label class="payment-option-card">
+                                <input type="radio" name="payment" value="cod">
+                                <div class="payment-card-inner">
+                                    <i class="bi bi-cash"></i>
+                                    <span>COD</span>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Reviews Section -->
+        <section class="reviews-section mt-5 py-5 border-top">
+            <h3 class="fw-bold mb-4">Customer Reviews</h3>
+            <div id="reviewsContainer" class="row g-4">
+                <!-- Reviews injected here -->
+            </div>
+        </section>
+
+        <!-- Similar Products -->
+        <section class="similar-products-section mt-5 py-5 border-top">
+            <h3 class="fw-bold mb-4">Similar Products</h3>
+            <div id="similarProductsContainer" class="row g-3">
+                <!-- Similar products injected here -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer py-5" id="footer">
+        <div class="container text-center">
+            <h5 class="fw-bold brand mb-2">Loft<span class="brand-accent">Originals</span></h5>
+            <p class="text-muted small">© 2026 LoftOriginals. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../static/script/products.js"></script>
+    <script src="../static/script/product-details.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const body = document.body;
+            const themeIcon = document.getElementById("themeIcon");
+            const toggleBtn = document.getElementById("themeToggle");
+
+            if (!localStorage.getItem("theme")) localStorage.setItem("theme", "dark");
+
+            function applyTheme(theme) {
+                if (theme === "light") {
+                    body.classList.add("light-theme");
+                    body.classList.remove("dark-theme");
+                    if (themeIcon) themeIcon.className = "bi bi-sun-fill";
+                } else {
+                    body.classList.remove("light-theme");
+                    body.classList.add("dark-theme");
+                    if (themeIcon) themeIcon.className = "bi bi-moon-stars-fill";
+                }
+            }
+
+            applyTheme(localStorage.getItem("theme"));
+
+            if (toggleBtn) {
+                toggleBtn.addEventListener("click", () => {
+                    const newTheme = body.classList.contains("light-theme") ? "dark" : "light";
+                    localStorage.setItem("theme", newTheme);
+                    applyTheme(newTheme);
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>
