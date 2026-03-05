@@ -1,0 +1,286 @@
+/* =========================
+   REFINED DARK LUXURY THEME
+========================= */
+
+body {
+  background: #0c0c0c;
+  color: #eaeaea;
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 0.3px;
+}
+
+/* Navbar */
+.navbar {
+  background: #111 !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* Cart */
+.cart-icon {
+  background: #1a1a1a;
+  padding: 6px 14px;
+  border-radius: 30px;
+  font-weight: 500;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: 0.3s ease;
+}
+
+.cart-icon:hover {
+  background: #222;
+}
+
+/* =========================
+   SEARCH + FILTER
+========================= */
+
+.form-control,
+.form-select {
+  background: #151515;
+  border: 1px solid #2a2a2a;
+  color: #fff;
+  border-radius: 8px;
+  padding: 10px;
+  transition: 0.3s ease;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: #888;
+  box-shadow: none;
+  background: #151515;
+  color: #fff;
+}
+
+/* =========================
+   PRODUCT CARD
+========================= */
+
+.card-custom {
+  background: #141414;
+  border-radius: 14px;
+  border: 1px solid #222;
+  overflow: hidden;
+  transition: all 0.35s ease;
+}
+
+.card-custom:hover {
+  transform: translateY(-6px);
+  border-color: #333;
+}
+
+.card-custom img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* Typography */
+.product-name {
+  font-weight: 500;
+  font-size: 15px;
+  margin-top: 10px;
+  color: #ddd;
+}
+
+.price {
+  font-weight: 600;
+  font-size: 14px;
+  color: #bbb;
+}
+
+/* =========================
+   SIZE SECTION
+========================= */
+
+.size-section label {
+  font-size: 12px;
+  color: #888;
+  margin-bottom: 6px;
+}
+
+.size-options {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.size-btn {
+  background: transparent;
+  border: 1px solid #333;
+  color: #aaa;
+  padding: 4px 9px;
+  border-radius: 6px;
+  font-size: 11px;
+  transition: 0.25s ease;
+}
+
+.size-btn:hover {
+  border-color: #aaa;
+  color: #fff;
+}
+
+.size-btn.active {
+  background: #fff;
+  color: #111;
+  border-color: #fff;
+  font-weight: 600;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.btn-outline-light {
+  border-radius: 8px !important;
+  border: 1px solid #444 !important;
+  color: #ddd !important;
+  background: transparent !important;
+  transition: 0.3s ease;
+}
+
+.btn-outline-light:hover {
+  background: #222 !important;
+  border-color: #666 !important;
+}
+
+.btn-light {
+  border-radius: 8px !important;
+  background: #fff !important;
+  color: #111 !important;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.btn-light:hover {
+  background: #ddd !important;
+}
+
+/* =========================
+   STRICT MOBILE 2-COLUMN GRID
+========================= */
+
+@media (max-width: 576px) {
+
+  .container {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  /* Force 2 columns always */
+  .col-6 {
+    width: 100%;
+  }
+
+  .row.g-2 {
+    gap: 14px !important;
+  }
+
+  .card-custom {
+    padding: 10px !important;
+    border-radius: 12px;
+  }
+
+  .card-custom img {
+    height: 180px;
+  }
+
+  .product-name {
+    font-size: 13px;
+  }
+
+  .price {
+    font-size: 12px;
+  }
+
+  .size-btn {
+    font-size: 10px;
+    padding: 3px 7px;
+  }
+
+  .btn-outline-light,
+  .btn-light {
+    font-size: 11px !important;
+    padding: 6px !important;
+  }
+
+  .cart-icon {
+    font-size: 12px;
+    padding: 4px 8px;
+  }
+
+  .form-control,
+  .form-select {
+    font-size: 12px;
+    padding: 7px;
+  }
+}
+
+  .brand-logo{
+    height: 58px;
+    width: auto;
+    object-fit: contain;
+    display: block;
+  }
+
+  .brand-logo-nm{
+    height: 58px;
+    width: auto;
+    object-fit: contain;
+
+    /* desktop zoom */
+    transform: scale(4);
+    transform-origin: left center;
+
+    margin-left: -29px;
+    padding-top: 1px;
+  }
+
+  .brand-text{
+    font-weight: 800;
+    letter-spacing: .2px;
+    line-height: 1;
+  }
+
+  /* ---------- Tablet ---------- */
+  @media (max-width: 991px){
+    .brand-logo-nm{
+      transform: scale(2.2);
+      margin-left: -18px;
+    }
+  }
+
+  /* ---------- Mobile ---------- */
+  @media (max-width: 576px){
+
+    /* navbar height control */
+    .navbar{
+      padding: 6px 0;
+    }
+
+    .navbar-brand{
+      display: flex;
+      align-items: center;
+    }
+
+    .brand-logo-nm{
+    height: 58px;
+    width: auto;
+    object-fit: contain;
+
+    /* desktop zoom */
+    transform: scale(3);
+    transform-origin: left center;
+
+    margin-left: -29px;
+    padding-top: 1px;
+    }
+
+    .brand-logo{
+      height: 42px;
+    }
+
+    .brand-text{
+      font-size: 16px;
+    }
+  }

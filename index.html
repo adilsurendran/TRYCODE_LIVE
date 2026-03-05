@@ -1,0 +1,1142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LoftOriginals - Fashion Store</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="./index.css">
+</head>
+
+
+<body class="light">
+
+  <!-- ✅ Top bar -->
+  <div class="topbar py-2">
+    <div class="container topbar-inner d-flex justify-content-between align-items-center">
+      <div class="topbar-left">
+        <div class="topbar-track">
+          <span>
+            <i class="bi bi-truck me-1"></i> Free Delivery over ₹999
+            <span class="mx-2 opacity-50">|</span>
+            <i class="bi bi-shield-check me-1"></i> Secure Payments
+            <span class="mx-3 opacity-50">|</span>
+            <i class="bi bi-telephone me-1"></i> +91 98765 43210
+            <span class="mx-2 opacity-50">|</span>
+            <i class="bi bi-geo-alt me-1"></i> Kerala, India
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ✅ Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
+    <div class="container">
+      <h5 class="offcanvas-title brand m-0 d-flex align-items-center gap-2">
+        <img src="./Vanta logo png.png" alt="" class="brand-logo">
+        <img src="./vanta .png" alt="" class="brand-logo-nm">
+      </h5>
+
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse d-none d-lg-flex">
+        <ul class="navbar-nav ms-auto gap-lg-3">
+          <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#categories">Categories</a></li>
+          <li class="nav-item"><a class="nav-link" href="#new">New Arrivals</a></li>
+          <li class="nav-item"><a class="nav-link" href="#best">Best Sellers</a></li>
+          <li class="nav-item"><a class="nav-link" href="#footer">Contact</a></li>
+        </ul>
+
+
+
+        <div class="d-flex gap-2">
+          <button class="btn btn-light icon-btn flex-grow-1" type="button"><i class="bi bi-search"></i></button>
+
+          <!-- 🌗 Mobile Toggle -->
+          <button class="btn icon-btn theme-toggle flex-grow-1" id="themeToggleMobile" type="button"
+            aria-label="Toggle theme">
+            <i class="bi bi-moon-stars-fill" id="themeIconMobile"></i>
+          </button>
+
+          <a href="cart.html" class="btn btn-dark flex-grow-1 cart-icon">
+            <i class="bi bi-bag me-1"></i>
+            Cart
+            <span id="cart-count" class="badge text-bg-warning ms-1">0</span>
+          </a>
+          <a href="wishlist.html" class="btn btn-outline-dark flex-grow-1">
+            <i class="bi bi-heart me-1"></i>Wishlist
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </nav>
+
+  <!-- ✅ Mobile Offcanvas (overlay) -->
+  <div class="offcanvas offcanvas-top mobile-offcanvas" tabindex="-1" id="mobileMenu">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title fw-bold brand m-0">
+        Loft<span class="brand-accent">Originals</span>
+      </h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+    </div>
+
+    <div class="offcanvas-body mobile-offcanvas-body">
+      <ul class="navbar-nav gap-2">
+        <li class="nav-item"><a class="nav-link" data-bs-dismiss="offcanvas" href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link" data-bs-dismiss="offcanvas" href="#categories">Categories</a></li>
+        <li class="nav-item"><a class="nav-link" data-bs-dismiss="offcanvas" href="#new">New Arrivals</a></li>
+        <li class="nav-item"><a class="nav-link" data-bs-dismiss="offcanvas" href="#best">Best Sellers</a></li>
+        <li class="nav-item"><a class="nav-link" data-bs-dismiss="offcanvas" href="#footer">Contact</a></li>
+      </ul>
+
+      <hr class="my-3">
+
+      <div class="d-flex gap-2">
+        <button class="btn btn-light icon-btn flex-grow-1" type="button"><i class="bi bi-search"></i></button>
+
+        <!-- 🌗 Mobile Toggle -->
+        <button class="btn icon-btn theme-toggle flex-grow-1" id="themeToggleMobile" type="button">
+          <i class="bi bi-moon-stars-fill" id="themeIconMobile"></i>
+        </button>
+
+
+        <a href="cart.html" class="btn btn-dark flex-grow-1 cart-icon">
+          <i class="bi bi-bag me-1"></i>
+          Cart
+          <span id="cart-count" class="badge text-bg-warning ms-1">0</span>
+        </a>
+        <a href="wishlist.html" class="btn btn-outline-dark flex-grow-1">
+          <i class="bi bi-heart me-1"></i>
+          Wishlist
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ✅ HERO (Video background) -->
+  <header class="hero">
+    <video class="hero-bg-video" autoplay muted loop playsinline preload="metadata" poster="./hero-mobile.jpg">
+      <source src="./fashionn.mp4" type="video/mp4">
+    </video>
+
+    <div class="hero-overlay"></div>
+
+    <div class="container hero-inner position-relative">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-6">
+          <!-- <span class="chip mb-3 d-inline-block">2026 Spring Collection</span> -->
+          <h1 class="display-5 fw-bold">Dress Better. Feel Better.</h1>
+          <p class="lead text-muted mt-3">
+            Discover trending outfits for Men & Women. Premium quality, best price & fast delivery.
+          </p>
+
+          <div class="d-flex gap-3 mt-4 flex-wrap">
+            <a href="#new" class="btn btn-dark btn-lg px-4">Shop Now</a>
+            <a href="#categories" class="btn btn-outline-dark btn-lg px-4">Explore</a>
+          </div>
+
+          <div class="row g-3 mt-4">
+            <div class="col-4">
+              <div class="mini-stat">
+                <h5 class="m-0 fw-bold">10k+</h5>
+                <p class="m-0 small text-muted">Customers</p>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="mini-stat">
+                <h5 class="m-0 fw-bold">250+</h5>
+                <p class="m-0 small text-muted">New Styles</p>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="mini-stat">
+                <h5 class="m-0 fw-bold">4.8★</h5>
+                <p class="m-0 small text-muted">Ratings</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="hero-offer-card glass-border">
+            <div class="d-flex align-items-center justify-content-between gap-3">
+              <div>
+                <div class="small text-muted">Today’s Offer</div>
+                <div class="fw-bold fs-3 m-0">30% OFF</div>
+                <div class="small text-muted">On selected dresses</div>
+              </div>
+              <a href="#new" class="btn btn-dark btn-sm px-3">Shop Deal</a>
+            </div>
+
+            <div class="mt-3 small text-muted">
+              <i class="bi bi-lightning-charge me-1"></i> Limited time • Fast delivery
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- ✅ Categories -->
+  <section class="py-5" id="categories">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-center mb-4">
+        <h3 class="fw-bold m-0 section-title">Shop by Category</h3>
+        <a href="#new" class="text-decoration-none fw-semibold link-dark">View All →</a>
+      </div>
+
+      <div class="row g-2 g-md-4">
+        <div class="col-4">
+          <div class="cat-card cat-card-sm">
+            <a href="women.html">
+              <img
+                src="https://images.pexels.com/photos/5704849/pexels-photo-5704849.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                alt="women model dress editorial" />
+
+              <div class="cat-overlay">
+                <h5 class="fw-bold">Women</h5>
+                <p class="small mb-3 opacity-75">Dresses • Tops • Ethnic</p>
+
+                <button class="btn btn-light btn-sm fw-semibold">
+                  Shop Now
+                </button>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="col-4">
+          <div class="cat-card cat-card-sm">
+            <a href="men.html">
+              <img
+                src="https://images.pexels.com/photos/1036627/pexels-photo-1036627.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                alt="men ethnic wear" />
+            </a>
+            <div class="cat-overlay">
+              <h5 class="fw-bold">Men</h5>
+              <p class="small mb-3 opacity-75">Shirts • Tees • Jeans</p>
+              <button class="btn btn-light btn-sm fw-semibold">
+                Shop Now
+              </button>
+            </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="col-4">
+          <div class="cat-card cat-card-sm">
+            <a href="kids.html">
+              <img
+                src="https://www.panachekids.co.uk/images/thumbs/0068122_little-a-baby-girls-cute-as-a-cupcake-khloe-tulle-frill-dress-pink-fairy.jpeg"
+                alt="kids dress model" />
+
+              <div class="cat-overlay">
+                <h5 class="fw-bold">Kids</h5>
+                <p class="small mb-3 opacity-75">Cute • Comfy • Trendy</p>
+
+                <button class="btn btn-light btn-sm fw-semibold">
+                  Shop Now
+                </button>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ✅ New Arrivals -->
+  <section class="py-5 bg-light" id="new">
+    <div class="container">
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3 mb-4">
+        <h3 class="fw-bold m-0 section-title">New Arrivals</h3>
+
+        <div class="d-flex gap-2 search-wrap">
+          <input type="text" id="searchInput" onkeyup="searchProducts()" placeholder="Search New Arrivals..." />
+          <button class="btn btn-dark search-btn" type="button">Search</button>
+        </div>
+      </div>
+
+      <div class="products-container row g-3 new-row-scroll">
+
+        <!-- Product 1 -->
+        <div class="col-sm-6 col-lg-3">
+          <a href="product.html" class="p-card card border-0 shadow-sm h-100 text-decoration-none text-dark">
+            <div class="p-img">
+              <img
+                src="https://images.pexels.com/photos/1488463/pexels-photo-1488463.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                alt="women casual dress model" />
+              <span class="tag">NEW</span>
+            </div>
+            <div class="card-body">
+              <h6 class="fw-bold mb-1">Floral Midi Dress</h6>
+              <p class="text-muted small mb-2">Women • Casual</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div>
+                  <span class="fw-bold">₹ 1,199</span>
+                  <span class="text-decoration-line-through text-danger small ms-2">₹ 1,499</span>
+                </div>
+                <span class="rating"><i class="bi bi-star-fill text-warning me-1"></i>4.6</span>
+              </div>
+            </div>
+            <div class="card-footer border-0 p-2">
+              <div class="d-flex gap-2">
+                <button class="btn btn-warning btn-sm text-dark fw-semibold action-btn py-1"
+                  style="flex:3;font-size:0.75rem;" data-action="cart" data-name="Floral Midi Dress" data-price="1499"
+                  data-image="https://images.pexels.com/photos/1488463/pexels-photo-1488463.jpeg?auto=compress&cs=tinysrgb&w=1200">
+                  <i class="bi bi-bag-fill me-1"></i>Add to Cart
+                </button>
+                <button
+                  class="btn btn-outline-dark btn-sm action-btn d-flex align-items-center justify-content-center py-1"
+                  style="flex:1;font-size:0.75rem;" data-action="wishlist" data-name="Floral Midi Dress"
+                  data-price="1499"
+                  data-image="https://images.pexels.com/photos/1488463/pexels-photo-1488463.jpeg?auto=compress&cs=tinysrgb&w=1200">
+                  <i class="bi bi-heart"></i>
+                </button>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="col-sm-6 col-lg-3">
+          <a href="product.html" class="p-card card border-0 shadow-sm h-100 text-decoration-none text-dark">
+            <div class="p-img">
+              <img src="https://5.imimg.com/data5/KK/YQ/MY-10139824/mens-linen-casual-shirt.jpg"
+                alt="men shirt studio model" />
+              <span class="tag tag-hot">HOT</span>
+            </div>
+            <div class="card-body">
+              <h6 class="fw-bold mb-1">Men Linen Shirt</h6>
+              <p class="text-muted small mb-2">Men • Summer</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div>
+                  <span class="fw-bold">₹ 899</span>
+                  <span class="text-decoration-line-through text-danger small ms-2">₹ 999</span>
+                </div>
+                <span class="rating"><i class="bi bi-star-fill text-warning me-1"></i>4.5</span>
+              </div>
+            </div>
+            <div class="card-footer border-0 p-2">
+              <div class="d-flex gap-2">
+                <button class="btn btn-warning btn-sm text-dark fw-semibold action-btn py-1"
+                  style="flex:3;font-size:0.75rem;" data-action="cart" data-name="Men Linen Shirt" data-price="999"
+                  data-image="https://5.imimg.com/data5/KK/YQ/MY-10139824/mens-linen-casual-shirt.jpg">
+                  <i class="bi bi-bag-fill me-1"></i>Add to Cart
+                </button>
+                <button
+                  class="btn btn-outline-dark btn-sm action-btn d-flex align-items-center justify-content-center py-1"
+                  style="flex:1;font-size:0.75rem;" data-action="wishlist" data-name="Men Linen Shirt" data-price="999"
+                  data-image="https://5.imimg.com/data5/KK/YQ/MY-10139824/mens-linen-casual-shirt.jpg">
+                  <i class="bi bi-heart"></i>
+                </button>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="col-sm-6 col-lg-3">
+          <a href="product.html" class="p-card card border-0 shadow-sm h-100 text-decoration-none text-dark">
+            <div class="p-img">
+              <img
+                src="https://jujujam.in/cdn/shop/files/Denim_on_Denim_Boys_and_Girls_Classy_Co-ord_Set_3.jpg?v=1754491490&width=1100"
+                alt="kids jeans set" />
+              <span class="tag">NEW</span>
+            </div>
+            <div class="card-body">
+              <h6 class="fw-bold mb-1">Kids Denim Set</h6>
+              <p class="text-muted small mb-2">Kids • Trendy</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div>
+                  <span class="fw-bold">₹ 999</span>
+                  <span class="text-decoration-line-through text-danger small ms-2">₹ 1,199</span>
+                </div>
+                <span class="rating"><i class="bi bi-star-fill text-warning me-1"></i>4.7</span>
+              </div>
+            </div>
+            <div class="card-footer border-0 p-2">
+              <div class="d-flex gap-2">
+                <button class="btn btn-warning btn-sm text-dark fw-semibold action-btn py-1"
+                  style="flex:3;font-size:0.75rem;" data-action="cart" data-name="Kids Denim Set" data-price="1199"
+                  data-image="https://jujujam.in/cdn/shop/files/Denim_on_Denim_Boys_and_Girls_Classy_Co-ord_Set_3.jpg?v=1754491490&width=1100">
+                  <i class="bi bi-bag-fill me-1"></i>Add to Cart
+                </button>
+                <button
+                  class="btn btn-outline-dark btn-sm action-btn d-flex align-items-center justify-content-center py-1"
+                  style="flex:1;font-size:0.75rem;" data-action="wishlist" data-name="Kids Denim Set" data-price="1199"
+                  data-image="https://jujujam.in/cdn/shop/files/Denim_on_Denim_Boys_and_Girls_Classy_Co-ord_Set_3.jpg?v=1754491490&width=1100">
+                  <i class="bi bi-heart"></i>
+                </button>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="col-sm-6 col-lg-3">
+          <a href="product.html" class="p-card card border-0 shadow-sm h-100 text-decoration-none text-dark">
+            <div class="p-img">
+              <img
+                src="https://images.pexels.com/photos/994523/pexels-photo-994523.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                alt="women party dress" />
+              <span class="tag tag-sale">SALE</span>
+            </div>
+            <div class="card-body">
+              <h6 class="fw-bold mb-1">Satin Party Dress</h6>
+              <p class="text-muted small mb-2">Women • Party</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div>
+                  <span class="fw-bold">₹ 1,599</span>
+                  <span class="text-decoration-line-through text-danger small ms-2">₹ 1,899</span>
+                </div>
+                <span class="rating"><i class="bi bi-star-fill text-warning me-1"></i>4.7</span>
+              </div>
+            </div>
+            <div class="card-footer border-0 p-2">
+              <div class="d-flex gap-2">
+                <button class="btn btn-warning btn-sm text-dark fw-semibold action-btn py-1"
+                  style="flex:3;font-size:0.75rem;" data-action="cart" data-name="Satin Party Dress" data-price="1899"
+                  data-image="https://images.pexels.com/photos/994523/pexels-photo-994523.jpeg?auto=compress&cs=tinysrgb&w=1200">
+                  <i class="bi bi-bag-fill me-1"></i>Add to Cart
+                </button>
+                <button
+                  class="btn btn-outline-dark btn-sm action-btn d-flex align-items-center justify-content-center py-1"
+                  style="flex:1;font-size:0.75rem;" data-action="wishlist" data-name="Satin Party Dress"
+                  data-price="1899"
+                  data-image="https://images.pexels.com/photos/994523/pexels-photo-994523.jpeg?auto=compress&cs=tinysrgb&w=1200">
+                  <i class="bi bi-heart"></i>
+                </button>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- Product 5 -->
+        <div class="col-sm-6 col-lg-3">
+          <a href="product.html" class="p-card card border-0 shadow-sm h-100 text-decoration-none text-dark">
+            <div class="p-img">
+              <img
+                src="https://images.pexels.com/photos/2983464/pexels-photo-2983464.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                alt="men casual tshirt" />
+              <span class="tag tag-hot">HOT</span>
+            </div>
+            <div class="card-body">
+              <h6 class="fw-bold mb-1">Cotton Crew Tee</h6>
+              <p class="text-muted small mb-2">Men • Casual</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div>
+                  <span class="fw-bold">₹ 599</span>
+                  <span class="text-decoration-line-through text-danger small ms-2">₹ 699</span>
+                </div>
+                <span class="rating"><i class="bi bi-star-fill text-warning me-1"></i>4.5</span>
+              </div>
+            </div>
+            <div class="card-footer border-0 p-2">
+              <div class="d-flex gap-2">
+                <button class="btn btn-warning btn-sm text-dark fw-semibold action-btn py-1"
+                  style="flex:3;font-size:0.75rem;" data-action="cart" data-name="Cotton Crew Tee" data-price="699"
+                  data-image="https://images.pexels.com/photos/2983464/pexels-photo-2983464.jpeg?auto=compress&cs=tinysrgb&w=1200">
+                  <i class="bi bi-bag-fill me-1"></i>Add to Cart
+                </button>
+                <button
+                  class="btn btn-outline-dark btn-sm action-btn d-flex align-items-center justify-content-center py-1"
+                  style="flex:1;font-size:0.75rem;" data-action="wishlist" data-name="Cotton Crew Tee" data-price="699"
+                  data-image="https://images.pexels.com/photos/2983464/pexels-photo-2983464.jpeg?auto=compress&cs=tinysrgb&w=1200">
+                  <i class="bi bi-heart"></i>
+                </button>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- Product 6 -->
+        <div class="col-sm-6 col-lg-3">
+          <a href="product.html" class="p-card card border-0 shadow-sm h-100 text-decoration-none text-dark">
+            <div class="p-img">
+              <img src="https://tse4.mm.bing.net/th/id/OIP.eJ4mIEzm5rAG0JqS6Ucn4gHaHa?rs=1&pid=ImgDetMain&o=7&rm=3"
+                alt="kids summer set" />
+              <span class="tag">NEW</span>
+            </div>
+            <div class="card-body">
+              <h6 class="fw-bold mb-1">Kids Summer Set</h6>
+              <p class="text-muted small mb-2">Kids • Comfort</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div>
+                  <span class="fw-bold">₹ 799</span>
+                  <span class="text-decoration-line-through text-danger small ms-2">₹ 899</span>
+                </div>
+                <span class="rating"><i class="bi bi-star-fill text-warning me-1"></i>4.6</span>
+              </div>
+            </div>
+            <div class="card-footer border-0 p-2">
+              <div class="d-flex gap-2">
+                <button class="btn btn-warning btn-sm text-dark fw-semibold action-btn py-1"
+                  style="flex:3;font-size:0.75rem;" data-action="cart" data-name="Kids Summer Set" data-price="899"
+                  data-image="https://tse4.mm.bing.net/th/id/OIP.eJ4mIEzm5rAG0JqS6Ucn4gHaHa?rs=1&pid=ImgDetMain&o=7&rm=3">
+                  <i class="bi bi-bag-fill me-1"></i>Add to Cart
+                </button>
+                <button
+                  class="btn btn-outline-dark btn-sm action-btn d-flex align-items-center justify-content-center py-1"
+                  style="flex:1;font-size:0.75rem;" data-action="wishlist" data-name="Kids Summer Set" data-price="899"
+                  data-image="https://tse4.mm.bing.net/th/id/OIP.eJ4mIEzm5rAG0JqS6Ucn4gHaHa?rs=1&pid=ImgDetMain&o=7&rm=3">
+                  <i class="bi bi-heart"></i>
+                </button>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- Product 7 -->
+        <div class="col-sm-6 col-lg-3">
+          <a href="product.html" class="p-card card border-0 shadow-sm h-100 text-decoration-none text-dark">
+            <div class="p-img">
+              <img src="https://i.pinimg.com/736x/10/de/a8/10dea87e4b1d052e4f1f16f877e13fe0.jpg"
+                alt="unisex hoodie streetwear" />
+              <span class="tag tag-hot">HOT</span>
+            </div>
+            <div class="card-body">
+              <h6 class="fw-bold mb-1">Streetwear Hoodie</h6>
+              <p class="text-muted small mb-2">Unisex • Street</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div>
+                  <span class="fw-bold">₹ 1,299</span>
+                  <span class="text-decoration-line-through text-danger small ms-2">₹ 1,399</span>
+                </div>
+                <span class="rating"><i class="bi bi-star-fill text-warning me-1"></i>4.4</span>
+              </div>
+            </div>
+            <div class="card-footer border-0 p-2">
+              <div class="d-flex gap-2">
+                <button class="btn btn-warning btn-sm text-dark fw-semibold action-btn py-1"
+                  style="flex:3;font-size:0.75rem;" data-action="cart" data-name="Streetwear Hoodie" data-price="1399"
+                  data-image="https://i.pinimg.com/736x/10/de/a8/10dea87e4b1d052e4f1f16f877e13fe0.jpg">
+                  <i class="bi bi-bag-fill me-1"></i>Add to Cart
+                </button>
+                <button
+                  class="btn btn-outline-dark btn-sm action-btn d-flex align-items-center justify-content-center py-1"
+                  style="flex:1;font-size:0.75rem;" data-action="wishlist" data-name="Streetwear Hoodie"
+                  data-price="1399"
+                  data-image="https://i.pinimg.com/736x/10/de/a8/10dea87e4b1d052e4f1f16f877e13fe0.jpg">
+                  <i class="bi bi-heart"></i>
+                </button>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- Product 8 -->
+        <div class="col-sm-6 col-lg-3">
+          <a href="product.html" class="p-card card border-0 shadow-sm h-100 text-decoration-none text-dark">
+            <div class="p-img">
+              <img src="https://images.unsplash.com/photo-1485462537746-965f33f7f6a7?auto=format&fit=crop&w=1200&q=80"
+                alt="hoodie" />
+              <span class="tag tag-sale">SALE</span>
+            </div>
+            <div class="card-body">
+              <h6 class="fw-bold mb-1">Oversized Hoodie</h6>
+              <p class="text-muted small mb-2">Unisex • Street</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div>
+                  <span class="fw-bold">₹ 1,099</span>
+                  <span class="text-decoration-line-through text-danger small ms-2">₹ 1,299</span>
+                </div>
+                <span class="rating"><i class="bi bi-star-fill text-warning me-1"></i>4.4</span>
+              </div>
+            </div>
+            <div class="card-footer border-0 p-2">
+              <div class="d-flex gap-2">
+                <button class="btn btn-warning btn-sm text-dark fw-semibold action-btn py-1"
+                  style="flex:3;font-size:0.75rem;" data-action="cart" data-name="Oversized Hoodie" data-price="1299"
+                  data-image="https://images.unsplash.com/photo-1485462537746-965f33f7f6a7?auto=format&fit=crop&w=1200&q=80">
+                  <i class="bi bi-bag-fill me-1"></i>Add to Cart
+                </button>
+                <button
+                  class="btn btn-outline-dark btn-sm action-btn d-flex align-items-center justify-content-center py-1"
+                  style="flex:1;font-size:0.75rem;" data-action="wishlist" data-name="Oversized Hoodie"
+                  data-price="1299"
+                  data-image="https://images.unsplash.com/photo-1485462537746-965f33f7f6a7?auto=format&fit=crop&w=1200&q=80">
+                  <i class="bi bi-heart"></i>
+                </button>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- Product 9 -->
+        <div class="col-sm-6 col-lg-3">
+          <a href="product.html" class="p-card card border-0 shadow-sm h-100 text-decoration-none text-dark">
+            <div class="p-img">
+              <img
+                src="https://images.pexels.com/photos/3755706/pexels-photo-3755706.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                alt="women blazer set" />
+              <span class="tag">NEW</span>
+            </div>
+            <div class="card-body">
+              <h6 class="fw-bold mb-1">Blazer Co-ord Set</h6>
+              <p class="text-muted small mb-2">Women • Formal</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div>
+                  <span class="fw-bold">₹ 2,199</span>
+                  <span class="text-decoration-line-through text-danger small ms-2">₹ 2,499</span>
+                </div>
+                <span class="rating"><i class="bi bi-star-fill text-warning me-1"></i>4.6</span>
+              </div>
+            </div>
+            <div class="card-footer border-0 p-2">
+              <div class="d-flex gap-2">
+                <button class="btn btn-warning btn-sm text-dark fw-semibold action-btn py-1"
+                  style="flex:3;font-size:0.75rem;" data-action="cart" data-name="Blazer Co-ord Set" data-price="2499"
+                  data-image="https://images.pexels.com/photos/3755706/pexels-photo-3755706.jpeg?auto=compress&cs=tinysrgb&w=1200">
+                  <i class="bi bi-bag-fill me-1"></i>Add to Cart
+                </button>
+                <button
+                  class="btn btn-outline-dark btn-sm action-btn d-flex align-items-center justify-content-center py-1"
+                  style="flex:1;font-size:0.75rem;" data-action="wishlist" data-name="Blazer Co-ord Set"
+                  data-price="2499"
+                  data-image="https://images.pexels.com/photos/3755706/pexels-photo-3755706.jpeg?auto=compress&cs=tinysrgb&w=1200">
+                  <i class="bi bi-heart"></i>
+                </button>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- Product 10 -->
+        <div class="col-sm-6 col-lg-3">
+          <a href="product.html" class="p-card card border-0 shadow-sm h-100 text-decoration-none text-dark">
+            <div class="p-img">
+              <img
+                src="https://images.pexels.com/photos/2857037/pexels-photo-2857037.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                alt="men denim jacket" />
+              <span class="tag tag-sale">SALE</span>
+            </div>
+            <div class="card-body">
+              <h6 class="fw-bold mb-1">Denim Jacket</h6>
+              <p class="text-muted small mb-2">Men • Street</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div>
+                  <span class="fw-bold">₹ 1,499</span>
+                  <span class="text-decoration-line-through text-danger small ms-2">₹ 1,799</span>
+                </div>
+                <span class="rating"><i class="bi bi-star-fill text-warning me-1"></i>4.5</span>
+              </div>
+            </div>
+            <div class="card-footer border-0 p-2">
+              <div class="d-flex gap-2">
+                <button class="btn btn-warning btn-sm text-dark fw-semibold action-btn py-1"
+                  style="flex:3;font-size:0.75rem;" data-action="cart" data-name="Denim Jacket" data-price="1799"
+                  data-image="https://images.pexels.com/photos/2857037/pexels-photo-2857037.jpeg?auto=compress&cs=tinysrgb&w=1200">
+                  <i class="bi bi-bag-fill me-1"></i>Add to Cart
+                </button>
+                <button
+                  class="btn btn-outline-dark btn-sm action-btn d-flex align-items-center justify-content-center py-1"
+                  style="flex:1;font-size:0.75rem;" data-action="wishlist" data-name="Denim Jacket" data-price="1799"
+                  data-image="https://images.pexels.com/photos/2857037/pexels-photo-2857037.jpeg?auto=compress&cs=tinysrgb&w=1200">
+                  <i class="bi bi-heart"></i>
+                </button>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- Product 11 -->
+        <div class="col-sm-6 col-lg-3">
+          <a href="product.html" class="p-card card border-0 shadow-sm h-100 text-decoration-none text-dark">
+            <div class="p-img">
+              <img
+                src="https://images.pexels.com/photos/3667816/pexels-photo-3667816.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                alt="kids kurta set" />
+              <span class="tag">NEW</span>
+            </div>
+            <div class="card-body">
+              <h6 class="fw-bold mb-1">Kids Kurta Set</h6>
+              <p class="text-muted small mb-2">Kids • Ethnic</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div>
+                  <span class="fw-bold">₹ 999</span>
+                  <span class="text-decoration-line-through text-danger small ms-2">₹ 1,099</span>
+                </div>
+                <span class="rating"><i class="bi bi-star-fill text-warning me-1"></i>4.7</span>
+              </div>
+            </div>
+            <div class="card-footer border-0 p-2">
+              <div class="d-flex gap-2">
+                <button class="btn btn-warning btn-sm text-dark fw-semibold action-btn py-1"
+                  style="flex:3;font-size:0.75rem;" data-action="cart" data-name="Kids Kurta Set" data-price="1099"
+                  data-image="https://images.pexels.com/photos/3667816/pexels-photo-3667816.jpeg?auto=compress&cs=tinysrgb&w=1200">
+                  <i class="bi bi-bag-fill me-1"></i>Add to Cart
+                </button>
+                <button
+                  class="btn btn-outline-dark btn-sm action-btn d-flex align-items-center justify-content-center py-1"
+                  style="flex:1;font-size:0.75rem;" data-action="wishlist" data-name="Kids Kurta Set" data-price="1099"
+                  data-image="https://images.pexels.com/photos/3667816/pexels-photo-3667816.jpeg?auto=compress&cs=tinysrgb&w=1200">
+                  <i class="bi bi-heart"></i>
+                </button>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- Product 12 -->
+        <div class="col-sm-6 col-lg-3">
+          <a href="product.html" class="p-card card border-0 shadow-sm h-100 text-decoration-none text-dark">
+            <div class="p-img">
+              <img
+                src="https://images.pexels.com/photos/974911/pexels-photo-974911.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                alt="women sneakers" />
+              <span class="tag tag-hot">HOT</span>
+            </div>
+            <div class="card-body">
+              <h6 class="fw-bold mb-1">Chunky Sneakers</h6>
+              <p class="text-muted small mb-2">Women • Footwear</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div>
+                  <span class="fw-bold">₹ 1,399</span>
+                  <span class="text-decoration-line-through text-danger small ms-2">₹ 1,599</span>
+                </div>
+                <span class="rating" style="color:#f5a623;">4.5 ★</span>
+              </div>
+            </div>
+            <div class="card-footer border-0 p-2">
+              <div class="d-flex gap-2">
+                <button class="btn btn-warning btn-sm text-dark fw-semibold action-btn py-1"
+                  style="flex:3;font-size:0.75rem;" data-action="cart" data-name="Chunky Sneakers" data-price="1399"
+                  data-image="https://images.pexels.com/photos/974911/pexels-photo-974911.jpeg?auto=compress&cs=tinysrgb&w=1200">
+                  <i class="bi bi-bag-fill me-1"></i>Add to Cart
+                </button>
+                <button
+                  class="btn btn-outline-dark btn-sm action-btn d-flex align-items-center justify-content-center py-1"
+                  style="flex:1;font-size:0.75rem;" data-action="wishlist" data-name="Chunky Sneakers" data-price="1399"
+                  data-image="https://images.pexels.com/photos/974911/pexels-photo-974911.jpeg?auto=compress&cs=tinysrgb&w=1200">
+                  <i class="bi bi-heart"></i>
+                </button>
+              </div>
+            </div>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ✅ Best Sellers + Banner -->
+  <section class="py-5" id="best">
+    <div class="container">
+      <div class="row g-4 align-items-center mb-4">
+        <div class="col-lg-7">
+          <h2 class="fw-bold mb-1">Best Sellers</h2>
+          <p class="text-muted m-0">Most loved styles by our customers.</p>
+        </div>
+        <div class="col-lg-5">
+          <div class="deal-bar p-3">
+            <div>
+              <div class="fw-bold">Weekend Deal</div>
+              <div class="small opacity-75">Buy 2 Get 1 Free on selected items</div>
+            </div>
+            <button class="btn btn-light btn-sm fw-semibold" type="button">Grab Now</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="banner-card banner-1">
+            <div class="p-4 text-white">
+              <h4 class="fw-bold">Ethnic Wear</h4>
+              <p class="opacity-75">Kurti • Saree • Set</p>
+              <button class="btn btn-light btn-sm fw-semibold" type="button">Explore</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="banner-card banner-2">
+            <div class="p-4 text-white">
+              <h4 class="fw-bold">Street Style</h4>
+              <p class="opacity-75">Hoodies • Cargo • Tees</p>
+              <button class="btn btn-light btn-sm fw-semibold" type="button">Explore</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="banner-card banner-3">
+            <div class="p-4 text-white">
+              <h4 class="fw-bold">Mens Formal</h4>
+              <p class="opacity-75">Shirts • Blazers</p>
+              <button class="btn btn-light btn-sm fw-semibold" type="button">Explore</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ✅ Footer -->
+  <footer class="footer py-5" id="footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <h5 class="fw-bold brand mb-2">Loft<span class="brand-accent">Originals</span></h5>
+          <p class="text-muted mb-3">Your fashion destination for trending outfits.</p>
+          <div class="d-flex gap-2">
+            <a class="social" href="#"><i class="bi bi-instagram"></i></a>
+            <a class="social" href="#"><i class="bi bi-facebook"></i></a>
+            <a class="social" href="#"><i class="bi bi-youtube"></i></a>
+            <a class="social" href="#"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+        <div class="col-md-2">
+          <h6 class="fw-bold">Shop</h6>
+          <ul class="list-unstyled small">
+            <li><a class="f-link" href="#new">New Arrivals</a></li>
+            <li><a class="f-link" href="#best">Best Sellers</a></li>
+            <li><a class="f-link" href="#categories">Categories</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-3">
+          <h6 class="fw-bold">Help</h6>
+          <ul class="list-unstyled small">
+            <li><a class="f-link" href="#">Shipping</a></li>
+            <li><a class="f-link" href="#">Returns</a></li>
+            <li><a class="f-link" href="#">Payments</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-3 ">
+          <h6 class="fw-bold">Contact</h6>
+          <p class="small text-muted mb-1"><i class="bi bi-envelope me-1"></i> support@loftoriginals.com</p>
+          <p class="small text-muted mb-1"><i class="bi bi-telephone me-1"></i> +91 98765 43210</p>
+          <p class="small text-muted m-0"><i class="bi bi-geo-alt me-1"></i> Kerala, India</p>
+        </div>
+      </div>
+
+      <hr class="my-4">
+      <p class="text-center small text-muted m-0">© 2026 LoftOriginals. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- ✅ Theme Toggle Script (MUST BE AFTER BUTTON EXISTS) -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+
+      const body = document.body;
+
+      // Both desktop + mobile toggle buttons
+      const toggleButtons = document.querySelectorAll("#themeToggleMobile");
+      const themeIcons = document.querySelectorAll("#themeIconMobile");
+
+      // Default theme = dark
+      if (!localStorage.getItem("theme")) {
+        localStorage.setItem("theme", "dark");
+      }
+
+      function applyTheme(theme) {
+        if (theme === "light") {
+          body.classList.add("light-theme");
+          themeIcons.forEach(icon => {
+            icon.classList.remove("bi-moon-stars-fill");
+            icon.classList.add("bi-sun-fill");
+          });
+        } else {
+          body.classList.remove("light-theme");
+          themeIcons.forEach(icon => {
+            icon.classList.remove("bi-sun-fill");
+            icon.classList.add("bi-moon-stars-fill");
+          });
+        }
+      }
+
+      // Load saved theme
+      const savedTheme = localStorage.getItem("theme");
+      applyTheme(savedTheme);
+
+      // Toggle click
+      toggleButtons.forEach(btn => {
+        btn.addEventListener("click", () => {
+          const currentTheme = body.classList.contains("light-theme") ? "light" : "dark";
+          const newTheme = currentTheme === "light" ? "dark" : "light";
+
+          localStorage.setItem("theme", newTheme);
+          applyTheme(newTheme);
+        });
+      });
+
+    });
+    function goToCart() {
+      window.location.href = "cart.html";
+    }
+    function searchProducts() {
+
+      let input = document.getElementById("searchInput").value.toLowerCase().trim();
+      let container = document.querySelector(".products-container");
+      let products = Array.from(container.querySelectorAll(".col-sm-6"));
+
+      let matchCount = 0;
+
+      products.forEach(function (col) {
+
+        let title = col.querySelector("h6").innerText.toLowerCase();
+
+        if (title.includes(input)) {
+          col.style.display = "";
+          container.prepend(col);   // matched items top il varum
+          matchCount++;
+        } else {
+          col.style.display = "none";
+        }
+
+      });
+
+    }
+
+    /* ====================================================
+       PREMIUM SIZE & QTY MODAL — New Arrivals
+    ==================================================== */
+    document.addEventListener("DOMContentLoaded", function () {
+
+      /* ── Cart count ── */
+      function updateCartCount() {
+        let c = JSON.parse(localStorage.getItem("cart")) || [];
+        let total = c.reduce((s, i) => s + (i.qty || 1), 0);
+        document.querySelectorAll("#cart-count").forEach(el => el.innerText = total);
+      }
+      updateCartCount();
+
+      let pendingAction = null;
+      let pendingProduct = null;
+
+      /* ── Open modal on Cart / Wishlist click ── */
+      document.querySelectorAll(".action-btn").forEach(btn => {
+        btn.addEventListener("click", function (e) {
+          e.preventDefault();
+          e.stopPropagation();
+
+          pendingAction = this.dataset.action;
+          pendingProduct = {
+            name: this.dataset.name,
+            price: parseInt(this.dataset.price),
+            image: this.dataset.image
+          };
+
+          document.querySelectorAll(".modal-size-btn").forEach(b => b.classList.remove("active"));
+          document.getElementById("modalQty").value = 1;
+          document.getElementById("modalSizeError").style.display = "none";
+          document.getElementById("modalActionLabel").innerText =
+            pendingAction === "cart" ? "Add to Cart" : "Add to Wishlist";
+          document.getElementById("modalProductName").innerText = pendingProduct.name;
+
+          new bootstrap.Modal(document.getElementById("sizeQtyModal")).show();
+        });
+      });
+
+      /* ── Size selection ── */
+      document.querySelectorAll(".modal-size-btn").forEach(btn => {
+        btn.addEventListener("click", function () {
+          document.querySelectorAll(".modal-size-btn").forEach(b => b.classList.remove("active"));
+          this.classList.add("active");
+          document.getElementById("modalSizeError").style.display = "none";
+        });
+      });
+
+      /* ── Qty controls ── */
+      document.getElementById("qtyMinus").addEventListener("click", () => {
+        let q = parseInt(document.getElementById("modalQty").value);
+        if (q > 1) document.getElementById("modalQty").value = q - 1;
+      });
+      document.getElementById("qtyPlus").addEventListener("click", () => {
+        document.getElementById("modalQty").value = parseInt(document.getElementById("modalQty").value) + 1;
+      });
+
+      /* ── Continue ── */
+      document.getElementById("modalContinueBtn").addEventListener("click", function () {
+        const activeSize = document.querySelector(".modal-size-btn.active");
+        if (!activeSize) {
+          document.getElementById("modalSizeError").style.display = "block";
+          return;
+        }
+        const product = {
+          name: pendingProduct.name,
+          price: pendingProduct.price,
+          image: pendingProduct.image,
+          size: activeSize.innerText,
+          qty: parseInt(document.getElementById("modalQty").value)
+        };
+        bootstrap.Modal.getInstance(document.getElementById("sizeQtyModal")).hide();
+        if (pendingAction === "cart") {
+          let cart = JSON.parse(localStorage.getItem("cart")) || [];
+          let ex = cart.find(i => i.name === product.name && i.size === product.size);
+          if (ex) { ex.qty += product.qty; } else { cart.push(product); }
+          localStorage.setItem("cart", JSON.stringify(cart));
+          updateCartCount();
+          window.location.href = "cart.html";
+        } else {
+          let wl = JSON.parse(localStorage.getItem("wishlist")) || [];
+          if (!wl.find(i => i.name === product.name && i.size === product.size)) wl.push(product);
+          localStorage.setItem("wishlist", JSON.stringify(wl));
+          window.location.href = "wishlist.html";
+        }
+      });
+
+    });
+  </script>
+
+  <!-- ✅ PREMIUM SIZE & QTY MODAL -->
+  <div class="modal fade" id="sizeQtyModal" tabindex="-1" aria-labelledby="sizeQtyModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content border-0 shadow-lg rounded-4 overflow-hidden">
+
+        <!-- Header -->
+        <div class="modal-header border-0 px-4 pt-4 pb-2" style="background:linear-gradient(135deg,#111 0%,#333 100%);">
+          <div>
+            <h5 class="modal-title fw-bold text-white mb-0" id="sizeQtyModalLabel">Select Size & Quantity</h5>
+            <p class="text-white-50 small mb-0" id="modalProductName"></p>
+          </div>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+
+        <!-- Body -->
+        <div class="modal-body px-4 pt-4 pb-3">
+
+          <!-- Size -->
+          <p class="fw-semibold mb-2">Choose Size <span class="text-danger">*</span></p>
+          <div class="d-flex flex-wrap gap-2 mb-1">
+            <button type="button" class="modal-size-btn btn btn-outline-dark">XS</button>
+            <button type="button" class="modal-size-btn btn btn-outline-dark">S</button>
+            <button type="button" class="modal-size-btn btn btn-outline-dark">M</button>
+            <button type="button" class="modal-size-btn btn btn-outline-dark">L</button>
+            <button type="button" class="modal-size-btn btn btn-outline-dark">XL</button>
+            <button type="button" class="modal-size-btn btn btn-outline-dark">XXL</button>
+          </div>
+          <small id="modalSizeError" class="text-danger" style="display:none;">⚠ Please select a size to
+            continue.</small>
+
+          <!-- Quantity -->
+          <p class="fw-semibold mb-2 mt-4">Quantity</p>
+          <div class="d-flex align-items-center gap-3">
+            <button class="btn btn-outline-dark rounded-circle fw-bold" id="qtyMinus"
+              style="width:38px;height:38px;line-height:1;">−</button>
+            <input type="number" id="modalQty" value="1" min="1"
+              class="form-control text-center fw-bold border-0 shadow-sm"
+              style="width:70px;border-radius:10px;font-size:1.1rem;" readonly>
+            <button class="btn btn-dark rounded-circle fw-bold" id="qtyPlus"
+              style="width:38px;height:38px;line-height:1;">+</button>
+          </div>
+
+        </div>
+
+        <!-- Footer -->
+        <div class="modal-footer border-0 px-4 pb-4 d-flex gap-2">
+          <button type="button" class="btn btn-outline-secondary flex-grow-1 rounded-3"
+            data-bs-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-dark flex-grow-1 rounded-3 fw-semibold" id="modalContinueBtn">
+            <span id="modalActionLabel">Continue</span> →
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal size button active style -->
+  <style>
+    .modal-size-btn.active {
+      background: #111 !important;
+      color: #fff !important;
+      border-color: #111 !important;
+    }
+
+    .modal-size-btn {
+      min-width: 48px;
+      font-weight: 600;
+      border-radius: 8px !important;
+      transition: all .2s;
+    }
+
+    .modal-content {
+      border-radius: 20px !important;
+    }
+
+    #modalQty::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+    }
+
+    /* Dark Mode Modal Tuning */
+    body:not(.light-theme) .modal-content {
+      background-color: #0b0b0b !important;
+      color: #fff !important;
+      border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    }
+
+    body:not(.light-theme) .modal-header {
+      background: #000 !important;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+    }
+
+    body:not(.light-theme) .modal-body,
+    body:not(.light-theme) .modal-footer {
+      background-color: #0b0b0b !important;
+    }
+
+    body:not(.light-theme) .modal-size-btn {
+      color: #fff !important;
+      border-color: rgba(255, 255, 255, 0.3) !important;
+    }
+
+    body:not(.light-theme) .modal-size-btn:hover:not(.active) {
+      background: rgba(255, 255, 255, 0.1) !important;
+    }
+
+    body:not(.light-theme) .modal-size-btn.active {
+      background: #fff !important;
+      color: #000 !important;
+      border-color: #fff !important;
+    }
+
+    body:not(.light-theme) .btn-outline-dark,
+    body:not(.light-theme) .btn-outline-secondary {
+      color: #fff !important;
+      border-color: rgba(255, 255, 255, 0.2) !important;
+    }
+
+    body:not(.light-theme) .btn-dark,
+    body:not(.light-theme) #qtyPlus {
+      background: #fff !important;
+      color: #000 !important;
+      border: none !important;
+    }
+
+    body:not(.light-theme) #modalQty {
+      background: transparent !important;
+      color: #fff !important;
+    }
+
+    body:not(.light-theme) .btn-close {
+      filter: invert(1) brightness(2);
+    }
+  </style>
+
+</body>
+
+</html>

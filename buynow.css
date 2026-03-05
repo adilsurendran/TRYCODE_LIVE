@@ -1,0 +1,244 @@
+/* ===============================
+   PREMIUM CHECKOUT DESIGN
+================================= */
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #fff;
+  transition: 0.3s ease;
+}
+
+/* Light Theme */
+body.light {
+  background: #f5f7fa;
+  color: #222;
+}
+
+/* Container spacing */
+.checkout-wrapper {
+  padding: 80px 20px;
+}
+
+/* CARD STYLE */
+.checkout-card {
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(20px);
+  border-radius: 22px;
+  padding: 40px;
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.35);
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.checkout-card:hover {
+  transform: translateY(-6px);
+}
+
+/* Light Card */
+body.light .checkout-card {
+  background: #ffffff;
+  border: 1px solid #eaeaea;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+}
+
+/* HEADINGS */
+.checkout-card h4,
+.checkout-card h5 {
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+/* INPUT STYLE */
+.checkout-input {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.15);
+  color: #fff;
+  padding: 14px 16px;
+  border-radius: 14px;
+  font-size: 15px;
+  transition: 0.3s ease;
+}
+
+.checkout-input::placeholder {
+  color: rgba(255,255,255,0.6);
+}
+
+.checkout-input:focus {
+  border-color: #ffc107;
+  box-shadow: 0 0 0 3px rgba(255,193,7,0.25);
+  outline: none;
+}
+
+/* Light Inputs */
+body.light .checkout-input {
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  color: #222;
+}
+
+body.light .checkout-input::placeholder {
+  color: #888;
+}
+
+/* SUMMARY */
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 14px;
+  font-weight: 500;
+}
+
+.summary-total {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+/* BUTTON */
+.checkout-btn {
+  background: linear-gradient(45deg, #ffc107, #ff9800);
+  border: none;
+  padding: 15px;
+  font-weight: 700;
+  border-radius: 14px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.checkout-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 30px rgba(255,193,7,0.4);
+}
+
+/* ===============================
+   RESPONSIVE IMPROVEMENTS
+================================= */
+
+/* Tablet */
+@media (max-width: 992px) {
+  .checkout-card {
+    padding: 30px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+
+  .checkout-wrapper {
+    padding: 50px 15px;
+  }
+
+  .checkout-card {
+    padding: 25px;
+    border-radius: 18px;
+  }
+
+  .checkout-btn {
+    font-size: 15px;
+    padding: 14px;
+  }
+
+  .summary-total {
+    font-size: 18px;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .checkout-card {
+    padding: 40px;
+  }
+
+  .checkout-input {
+    padding: 12px;
+    font-size: 14px;
+  }
+}
+/* Product Box */
+.product-box {
+  align-items: center;
+}
+
+.product-img {
+  width: 90px;
+  height: 80px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+/* Mobile → Order summary top */
+@media (max-width: 992px) {
+  .col-lg-4 {
+    margin-bottom: 20px;
+  }
+}
+/* Navigation Buttons */
+.nav-btn {
+  background: linear-gradient(135deg, #1e1e2f, #2a2a40);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.1);
+  padding: 8px 20px;
+  border-radius: 30px;
+  font-weight: 500;
+  transition: 0.3s ease;
+  font-size: 14px;
+}
+
+.nav-btn:hover {
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* Product Image */
+.product-img {
+  width: 70px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.checkout-card{
+  background:#fff;
+  padding:25px;
+  border-radius:12px;
+  box-shadow:0 8px 25px rgba(0,0,0,0.08);
+}
+
+.product-img{
+  width:70px;
+  height:90px;
+  object-fit:cover;
+  border-radius:8px;
+}
+
+.summary-row{
+  display:flex;
+  justify-content:space-between;
+  margin-bottom:10px;
+}
+
+.summary-total{
+  font-weight:600;
+  font-size:18px;
+}
+
+.checkout-input{
+  border-radius:8px;
+  padding:10px;
+}
+
+.checkout-btn{
+  background:black;
+  color:white;
+  padding:12px;
+  border:none;
+  border-radius:8px;
+  font-weight:600;
+  transition:0.3s;
+}
+
+.checkout-btn:hover{
+  background:#333;
+}
