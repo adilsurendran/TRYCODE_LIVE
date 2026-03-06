@@ -37,63 +37,64 @@
   </div>
 
   <!-- ✅ Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
-    <div class="container">
-      <h5 class="offcanvas-title brand m-0 d-flex align-items-center gap-2">
-        <img src="../static/media/Vanta logo png.png" alt="" class="brand-logo">
-        <img src="../static/media/vanta .png" alt="" class="brand-logo-nm">
-      </h5>
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container d-flex justify-content-between align-items-center">
+      <a href="index.html" class="navbar-brand d-flex align-items-center gap-2 m-0 p-0">
+        <img src="../static/media/Vanta logo png.png" alt="vanta" class="brand-logo">
+        <img src="../static/media/vanta .png" alt="vanta" class="brand-logo-nm">
+      </a>
 
-
-      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse d-none d-lg-flex">
-        <ul class="navbar-nav ms-auto gap-lg-3">
-          <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="#categories">Categories</a></li>
-          <li class="nav-item"><a class="nav-link" href="#new">New Arrivals</a></li>
-          <li class="nav-item"><a class="nav-link" href="#best">Best Sellers</a></li>
-          <li class="nav-item"><a class="nav-link" href="#footer">Contact</a></li>
-        </ul>
-
-
-
-        <div class="d-flex gap-2">
-          <button class="btn btn-light icon-btn flex-grow-1" type="button"><i class="bi bi-search"></i></button>
-
-          <!-- 🌗 Mobile Toggle -->
-          <button class="btn icon-btn theme-toggle flex-grow-1" id="themeToggleMobile" type="button"
-            aria-label="Toggle theme">
-            <i class="bi bi-moon-stars-fill" id="themeIconMobile"></i>
-          </button>
-
-          <a href="cart.html" class="btn btn-dark flex-grow-1 cart-icon">
-            <i class="bi bi-bag me-1"></i>
-            Cart
-            <span id="cart-count" class="badge text-bg-warning ms-1">0</span>
-          </a>
-          <a href="wishlist.html" class="btn btn-outline-dark flex-grow-1">
-            <i class="bi bi-heart me-1"></i>Wishlist
-          </a>
+      <div class="d-flex align-items-center gap-2 navbar-actions">
+        <!-- Desktop Nav Links -->
+        <div class="collapse navbar-collapse d-none d-lg-block me-3">
+          <ul class="navbar-nav gap-3">
+            <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#categories">Categories</a></li>
+            <li class="nav-item"><a class="nav-link" href="#new">New Arrivals</a></li>
+            <li class="nav-item"><a class="nav-link" href="#best">Best Sellers</a></li>
+          </ul>
         </div>
 
+        <!-- Search (Desktop) -->
+        <div class="d-none d-md-block me-2">
+          <input type="text" id="searchInput" class="form-control" placeholder="Search...">
+        </div>
+
+        <button class="icon-btn theme-toggle-btn" id="themeToggle" title="Toggle theme">
+          <i class="bi bi-moon-stars-fill theme-icon" id="themeIcon"></i>
+        </button>
+
+        <a href="wishlist.html" class="icon-btn" title="Wishlist">
+          <i class="bi bi-heart"></i>
+        </a>
+
+        <a href="cart.html"
+          class="btn btn-warning d-flex align-items-center gap-2 px-3 rounded-3 position-relative fw-bold cart-btn-nav">
+          <i class="bi bi-bag-fill"></i>
+          <span class="d-none d-sm-inline">Cart</span>
+          <span id="cart-count" class="badge bg-dark text-white rounded-pill">0</span>
+        </a>
+
+        <!-- Mobile Toggler -->
+        <button class="navbar-toggler icon-btn border-0 ms-1 d-lg-none" type="button" data-bs-toggle="offcanvas"
+          data-bs-target="#mobileMenu">
+          <i class="bi bi-list fs-4"></i>
+        </button>
       </div>
     </div>
   </nav>
 
   <!-- ✅ Mobile Offcanvas (overlay) -->
-  <div class="offcanvas offcanvas-top mobile-offcanvas" tabindex="-1" id="mobileMenu">
-    <div class="offcanvas-header">
+  <div class="offcanvas offcanvas-top mobile-offcanvas" tabindex="-1" id="mobileMenu" style="height: fit-content;">
+    <div class="offcanvas-header border-0 pb-0">
       <h5 class="offcanvas-title fw-bold brand m-0">
         Loft<span class="brand-accent">Originals</span>
       </h5>
-      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
 
     <div class="offcanvas-body mobile-offcanvas-body">
-      <ul class="navbar-nav gap-2">
+      <ul class="navbar-nav gap-2 mb-4">
         <li class="nav-item"><a class="nav-link" data-bs-dismiss="offcanvas" href="#">Home</a></li>
         <li class="nav-item"><a class="nav-link" data-bs-dismiss="offcanvas" href="#categories">Categories</a></li>
         <li class="nav-item"><a class="nav-link" data-bs-dismiss="offcanvas" href="#new">New Arrivals</a></li>
@@ -101,25 +102,20 @@
         <li class="nav-item"><a class="nav-link" data-bs-dismiss="offcanvas" href="#footer">Contact</a></li>
       </ul>
 
-      <hr class="my-3">
-
-      <div class="d-flex gap-2">
-        <button class="btn btn-light icon-btn flex-grow-1" type="button"><i class="bi bi-search"></i></button>
-
-        <!-- 🌗 Mobile Toggle -->
-        <button class="btn icon-btn theme-toggle flex-grow-1" id="themeToggleMobile" type="button">
-          <i class="bi bi-moon-stars-fill" id="themeIconMobile"></i>
+      <div class="d-flex gap-2 justify-content-center">
+        <button class="icon-btn theme-toggle-btn flex-grow-1" id="themeToggleMobile" type="button">
+          <i class="bi bi-moon-stars-fill theme-icon" id="themeIconMobile"></i>
         </button>
 
-
-        <a href="cart.html" class="btn btn-dark flex-grow-1 cart-icon">
-          <i class="bi bi-bag me-1"></i>
-          Cart
-          <span id="cart-count" class="badge text-bg-warning ms-1">0</span>
+        <a href="wishlist.html" class="icon-btn flex-grow-1" title="Wishlist">
+          <i class="bi bi-heart"></i>
         </a>
-        <a href="wishlist.html" class="btn btn-outline-dark flex-grow-1">
-          <i class="bi bi-heart me-1"></i>
-          Wishlist
+
+        <a href="cart.html"
+          class="btn btn-warning d-flex align-items-center justify-content-center gap-2 px-3 rounded-3 fw-bold flex-grow-1"
+          style="height: 40px;">
+          <i class="bi bi-bag-fill"></i>
+          <span>Cart</span>
         </a>
       </div>
     </div>
@@ -140,7 +136,7 @@
           <!-- <span class="chip mb-3 d-inline-block">2026 Spring Collection</span> -->
           <h1 class="display-5 fw-bold">Dress Better. Feel Better.</h1>
           <p class="lead text-muted mt-3">
-            Discover trending outfits for Men & Women. Premium quality, best price & fast delivery.
+            Discover trending outfits for Men & Products. Premium quality, best price & fast delivery.
           </p>
 
           <div class="d-flex gap-3 mt-4 flex-wrap">
@@ -202,13 +198,13 @@
       <div class="row g-2 g-md-4">
         <div class="col-4">
           <div class="cat-card cat-card-sm">
-            <a href="women.html">
+            <a href="products.html">
               <img
                 src="https://images.pexels.com/photos/5704849/pexels-photo-5704849.jpeg?auto=compress&cs=tinysrgb&w=1200"
-                alt="women model dress editorial" />
+                alt="products model dress editorial" />
 
               <div class="cat-overlay">
-                <h5 class="fw-bold">Women</h5>
+                <h5 class="fw-bold">Products</h5>
                 <p class="small mb-3 opacity-75">Dresses • Tops • Ethnic</p>
 
                 <button class="btn btn-light btn-sm fw-semibold">
@@ -286,7 +282,7 @@
             </div>
             <div class="card-body">
               <h6 class="fw-bold mb-1">Floral Midi Dress</h6>
-              <p class="text-muted small mb-2">Women • Casual</p>
+              <p class="text-muted small mb-2">Products • Casual</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div>
                   <span class="fw-bold">₹ 1,199</span>
@@ -403,7 +399,7 @@
             </div>
             <div class="card-body">
               <h6 class="fw-bold mb-1">Satin Party Dress</h6>
-              <p class="text-muted small mb-2">Women • Party</p>
+              <p class="text-muted small mb-2">Products • Party</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div>
                   <span class="fw-bold">₹ 1,599</span>
@@ -598,7 +594,7 @@
             </div>
             <div class="card-body">
               <h6 class="fw-bold mb-1">Blazer Co-ord Set</h6>
-              <p class="text-muted small mb-2">Women • Formal</p>
+              <p class="text-muted small mb-2">Products • Formal</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div>
                   <span class="fw-bold">₹ 2,199</span>
@@ -716,7 +712,7 @@
             </div>
             <div class="card-body">
               <h6 class="fw-bold mb-1">Chunky Sneakers</h6>
-              <p class="text-muted small mb-2">Women • Footwear</p>
+              <p class="text-muted small mb-2">Products • Footwear</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div>
                   <span class="fw-bold">₹ 1,399</span>
@@ -847,8 +843,8 @@
       const body = document.body;
 
       // Both desktop + mobile toggle buttons
-      const toggleButtons = document.querySelectorAll("#themeToggleMobile");
-      const themeIcons = document.querySelectorAll("#themeIconMobile");
+      const toggleButtons = document.querySelectorAll(".theme-toggle-btn");
+      const themeIcons = document.querySelectorAll(".theme-icon");
 
       // Default theme = dark
       if (!localStorage.getItem("theme")) {
