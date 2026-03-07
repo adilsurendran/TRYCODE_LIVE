@@ -1161,6 +1161,14 @@
     transition: 0.3s ease;
   }
 
+  #searchInput::placeholder {
+    color: rgba(255, 255, 255, 0.6) !important;
+  }
+
+  body.light-theme #searchInput::placeholder {
+    color: rgba(0, 0, 0, 0.4) !important;
+  }
+
   body.light-theme #searchInput {
     border: 1px solid rgba(0, 0, 0, 0.1);
   }
